@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://proyecto10-noviembre-1.onrender.com/api' // URL en producción
+const baseURL = 'https://proyecto10enero.onrender.com' // URL en producción
 
 export const fetchAPI = async (method, url, data = null) => {
   const token = localStorage.getItem('token')
