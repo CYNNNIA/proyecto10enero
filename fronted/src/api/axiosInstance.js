@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-  baseURL: 'https://proyecto10-noviembre-1.onrender.com/api' // URL del backend en producción
+  baseURL: 'https://proyecto10enero.onrender.com' // URL del backend en producción
 })
 
 axiosInstance.interceptors.request.use(
