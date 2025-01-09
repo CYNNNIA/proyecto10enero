@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-  baseURL: 'https://proyecto10enero.onrender.com'
+  baseURL: 'https://proyecto10enero.onrender.com/api'
 })
 
 axiosInstance.interceptors.request.use(
