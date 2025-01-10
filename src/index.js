@@ -12,10 +12,7 @@ const app = express()
 const connectDB = async () => {
   try {
     // Conexión con MongoDB sin opciones obsoletas
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
+    await mongoose.connect(process.env.MONGO_URI)
     console.log('MongoDB conectado correctamente')
   } catch (error) {
     console.error('Error al conectar a MongoDB:', error.message)
@@ -29,8 +26,7 @@ connectDB()
 app.use(
   cors({
     origin: [
-      'http://localhost:3000', // URL para desarrollo local
-      'https://proyecto10-noviembre.vercel.app'
+      'http://localhost:3000' // URL para desarrollo local
     ],
     credentials: true // Permite el uso de cookies y cabeceras en las solicitudes
   })
